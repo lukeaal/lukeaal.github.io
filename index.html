@@ -4,28 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+
+
+  
+  <style>
+    @media (max-width: 640px) {
+      .project-heading {
+        padding-left: .5rem;
+      }
+    }
+  </style>
+
   <title>Luke Atkins</title>
 </head>
 <body class="bg-gray-100">
   <div class="container mx-auto py-8">
     <header class="text-center mb-8">
-      <h1 class="text-4xl font-bold">Luke Atkins</h1>
-      <p class="text-gray-600">I am cs + math student @ Indiana University Bloomington</p>
+      <h1 class="text-5xl font-bold">Luke Atkins</h1>
+      <p class="text-gray-600">CS + Math student @ Indiana University Bloomington 
+      </p>
+      <img src="media/Me.jpg" alt="Sleek Black and White Photo" class="rounded-full w-16 h-16 mx-auto mb-4">
     </header>
     <div class="flex justify-center mb-8">
-      <a href="https://github.com/lukeaal" class="text-blue-500 hover:text-blue-700 mx-4">GitHub</a>
-      <a href="https://linkedin.com/in/luke-atkins" class="text-blue-500 hover:text-blue-700 mx-4">LinkedIn</a>
+      <a href="../media/LukeAtkinsResume.pdf" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">Resume</a>
+      <a href="https://github.com/lukeaal" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">GitHub</a>
+      <a href="https://linkedin.com/in/luke-atkins" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">LinkedIn</a>
     </div>
     <section class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Projects</h2>
+      <h2 class="text-3xl font-bold mb-4 project-heading">Projects</h2>
       <div class="grid grid-cols-1 gap-4">
-        <!-- Place your project cards here -->
+        <!-- comment for copying later!!! -->
         <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">Project 1</h3>
-          <p class="text-gray-600">Description of Project 1</p>
+          <h3 class="text-xl font-bold mb-2">CashMap - IOS app for location based spending awareness </h3>
+          <p class="text-gray-600">Cashmap lets you log your purchases, along with where you placed them 
+            in real time. A visual map of your location is used trends of where 
+            you make the most purchases. After enough purchases have been logged in a certain area 
+            the CashMap will notify the user if they have reached within 5 meters of where they 
+            have spent a considerable amount before. All in an effort to make the use aware of their 
+            spending habits. 
+          </p>
         </div>
         <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">Project 2</h3>
+          <h3 class="text-xl font-bold mb-2">Spotify Artist Niche Analysis</h3>
           <p class="text-gray-600">Description of Project 2</p>
         </div>
       </div>
