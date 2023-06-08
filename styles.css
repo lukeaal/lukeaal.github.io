@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-color: cornflowerblue;
+    align-items: center;
+    
+  }
+
+ .about-box {
+    display: flex;
+    width: 75%;
+    
+    height: 50px;
+    background-color: aquamarine;
+ }
