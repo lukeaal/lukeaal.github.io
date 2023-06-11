@@ -13,6 +13,18 @@
         padding-left: .5rem;
       } 
     }
+    @media (min-width: 768px) {
+      .me-description {
+        max-width: 45%;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    .me-description {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
     .image-container img {
       width: 100%;
       height: 100%;
@@ -21,6 +33,8 @@
     }
     .quip-phrase {
         margin-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     .project-link {
       position: relative;
@@ -37,16 +51,22 @@
 </head>
 <body class="bg-gray-100">
   <div class="container mx-auto py-8">
-    <header class="text-center mb-8">
+    <header class="text-center mb-2">
       <h1 class="text-5xl font-bold">Luke Atkins</h1>
-      <p class="text-gray-600 quip-phrase">CS + Math student @ Indiana University Bloomington 
+      <p class="text-gray-600 quip-phrase">CS + Math student @ Indiana University 
       </p>
      
-      <div class="flex flex-wrap justify-center">
-        <div class="w-6/12 sm:w-4/12 px-4">
+      <div class="flex-col flex-wrap justify-center">
+        <div class="w-6/12 sm:w-4/12 px-4 mx-auto">
           <img src="../media/HeadShot.jpg" alt="Photo of me." class="rounded-full shadow max-w-full h-auto align-middle border-none" />
         </div>
+        <div class="pt-3 text-center">
+          <p class="text-gray-600 me-description">Ask me about my research @ LSU! Outside of that, you can find me 
+            hosting pitch-ins, discorvering new house music, and playing pickle ball. 
+          </p>  
+        </div>
       </div>
+
 
     </header>
     <div class="flex justify-center mb-8">
@@ -58,35 +78,55 @@
     <section class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold mb-4 project-heading">Projects</h2>
       <div class="grid grid-cols-1 gap-4">
-        
         <!-- Cashmap ios app -->
         <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">CashMap - IOS app for location based spending awareness </h3>
-          <p class="text-gray-600">Cashmap lets you log your purchases, along with where you placed them 
-            in real time. A visual map of your location is used trends of where 
-            you make the most purchases. After enough purchases have been logged in a certain area 
-            the CashMap will notify the user if they have reached within 5 meters of where they 
-            have spent a considerable amount before. All in an effort to make the individuals aware of their 
-            spending habits. 
+          <h3 class="text-xl font-bold mb-2">CashMap - IOS app for location based spending awareness</h3>
+          <p class="text-gray-600">
+            CashMap is an IOS app that promotes daily budget mindfulness in a geographical context. 
+            Users record their purchases, which are then displayed on a visual map of their local area. 
+            CashMap enhances spending awareness by sending push notifications when users approach their 
+            spending hotspots and provides widgets for at-a-glance spending metrics. 
+            Whether you aim to kick buying coffee out everyday or prioritize supporting local businesses, 
+            CashMap reminds you.
           </p>
+          <div class="mt-4"></div>
+          <p class="text-gray-600 justify-start">Baked with ❤️ using UI Kit, Swift UI, Widget Kit, Map Kit, Core Location, and Core Data.</p>
           <div class="flex justify-end">
             <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
           </div>
-          
-        <!--Spotofy musical niche-->  
         </div>
-        <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">Spotify Artist Niche Analysis</h3>
-          <p class="text-gray-600">Description of Project 2</p>
+         <!--Spotify Artist Niche Analysis - Spotipy API and Regression--> 
+         <div class="bg-white shadow-md rounded-lg p-4">
+          <h3 class="text-xl font-bold mb-2">Spotify Artist Niche Analysis - SpotiPy API and regression</h3>
+          <p class="text-gray-600">
+            Analyze musicians' specialized features using Spotify API data. By regression on popular 
+            songs' abstract features, we uncover each artist's niche. Factors like danceability, 
+            energy, instrumentalness, etc., contribute to the analysis. For the aspiring artist or 
+            establsihed band, this serves as a reference point to connect with their fan base. For the 
+            music enjoyer, it enhances their musical literacy, enabling them to communicate and 
+            explore preferred abstract musical features within their own playlists and beyond.
+          </p>
+          <div class="mt-4"></div>
+          <p class="text-gray-600 justify-start">Basted with ❤️ using Python, R, SpotiPy, NumPy, and Rpart.</p>
           <div class="flex justify-end">
             <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
           </div>
         </div>
 
-        <!--Numpy Only Nerual Network-->
+        <!--Numpy Only Nerual Network - UCI Wine Dataset-->
         <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">Numpy Only Nerual Network - UCI Wine Dataset</h3>
-          <p class="text-gray-600">Description of Project 3</p>
+          <h3 class="text-xl font-bold mb-2">NumPy Only Nerual Network - UCI Wine Dataset</h3>
+          <p class="text-gray-600">
+            Wine region classification achieved by building a neural network from scratch using 
+            a Multi-Layer Perceptron algorithm. The implementation is based on 
+            'Machine Learning: An Algorithmic Perspective' by Stephen Marsland, Chapman & Hall. 
+            The entire model is implemented in NumPy without the use of pandas or any other 
+            machine learning libraries. Although this model does not replace the expertise of 
+            a sommelier, it achieves an impressive accuracy of 96% in 5-fold cross-validation
+             with just one hidden layer.
+          </p>
+          <div class="mt-4"></div>
+          <p class="text-gray-600 justify-start">Battered with ❤️ using NumPy</p>
           <div class="flex justify-end">
             <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
           </div>
