@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
-
-
-  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">  
   <style>
     @media (max-width: 640px) {
       .project-heading {
@@ -45,12 +42,28 @@
       text-decoration: underline;
       transform: translate(-50%, 50%);
     }
+    .spline-view-bg{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Make the 3D scene ignore pointer events */
+      z-index: -1; 
+    }
    </style>
 
   <title>Luke Atkins</title>
 </head>
-<body class="bg-gray-100">
-  <div class="container mx-auto py-8">
+<body class="gradient-bg">
+
+  <div class="spline-view-bg">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.366/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/Q6uqLDKQMUySYmup/scene.splinecode"></spline-viewer>
+  </div>
+  
+  
+<div class="container mx-auto py-8">
     <header class="text-center mb-2">
       <h1 class="text-5xl font-bold">Luke Atkins</h1>
       <p class="text-gray-600 quip-phrase">CS + Math student @ Indiana University 
@@ -79,8 +92,8 @@
       <h2 class="text-3xl font-bold mb-4 project-heading">Projects</h2>
       <div class="grid grid-cols-1 gap-4">
         <!-- Cashmap ios app -->
-        <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">CashMap - IOS app for location based spending awareness</h3>
+        <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+          <h3 class="text-xl font-bold mb-2">CashMap 💵📍 - IOS app for location based spending awareness</h3>
           <p class="text-gray-600">
             CashMap is an IOS app that promotes daily budget mindfulness in a geographical context. 
             Users record their purchases, which are then displayed on a visual map of their local area. 
@@ -96,8 +109,8 @@
           </div>
         </div>
          <!--Spotify Artist Niche Analysis - Spotipy API and Regression--> 
-         <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">Spotify Artist Niche Analysis - SpotiPy API and regression</h3>
+         <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+          <h3 class="text-xl font-bold mb-2">Spotify Artist Niche Analysis 🎶📊 - SpotiPy API and regression</h3>
           <p class="text-gray-600">
             Analyze musicians' specialized features using Spotify API data. By regression on popular 
             songs' abstract features, we uncover each artist's niche. Factors like danceability, 
@@ -114,8 +127,8 @@
         </div>
 
         <!--Numpy Only Nerual Network - UCI Wine Dataset-->
-        <div class="bg-white shadow-md rounded-lg p-4">
-          <h3 class="text-xl font-bold mb-2">NumPy Only Nerual Network - UCI Wine Dataset</h3>
+        <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+          <h3 class="text-xl font-bold mb-2">NumPy Only Nerual Network 🧠🍷 - UCI Wine Dataset</h3>
           <p class="text-gray-600">
             Wine region classification achieved by building a neural network from scratch using 
             a Multi-Layer Perceptron algorithm. The implementation is based on 
