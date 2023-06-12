@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">  
   <style>
+    body {
+	background: linear-gradient(-45deg, #d6e0e8, #acbde2, #c6dce3, #baeaf8);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
     @media (max-width: 640px) {
       .project-heading {
         padding-left: .5rem;
@@ -12,7 +30,7 @@
     }
     @media (min-width: 768px) {
       .me-description {
-        max-width: 45%;
+        max-width: 90%;
         text-align: center;
         margin: 0 auto;
       }
@@ -51,43 +69,47 @@
       pointer-events: none; /* Make the 3D scene ignore pointer events */
       z-index: -1; 
     }
+    .em{
+      color: teal;
+    }
    </style>
 
   <title>Luke Atkins</title>
 </head>
 <body class="gradient-bg">
-
+  
   <div class="spline-view-bg">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.366/build/spline-viewer.js"></script>
-    <spline-viewer url="https://prod.spline.design/Q6uqLDKQMUySYmup/scene.splinecode"></spline-viewer>
+    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.366/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/Q6uqLDKQMUySYmup/scene.splinecode"></spline-viewer> -->
   </div>
   
   
 <div class="container mx-auto py-8">
     <header class="text-center mb-2">
-      <h1 class="text-5xl font-bold">Luke Atkins</h1>
-      <p class="text-gray-600 quip-phrase">CS + Math student @ Indiana University 
+      <h1 class="text-5xl font-bold text-blue-900">Luke Atkins</h1>
+      <p class="text-gray-600 font-bold quip-phrase">CS + Math student @ Indiana University 
       </p>
      
       <div class="flex-col flex-wrap justify-center">
         <div class="w-6/12 sm:w-4/12 px-4 mx-auto">
           <img src="../media/HeadShot.jpg" alt="Photo of me." class="rounded-full shadow max-w-full h-auto align-middle border-none" />
         </div>
-        <div class="pt-3 text-center">
-          <p class="text-gray-600 me-description">Ask me about my research @ LSU! Outside of that, you can find me 
-            hosting pitch-ins, discorvering new house music, and playing pickle ball. 
-          </p>  
-        </div>
+        
       </div>
 
-
     </header>
-    <div class="flex justify-center mb-8">
-      <a href="../media/LukeAtkinsResume.pdf" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">Resume</a>
-      <a href="https://github.com/lukeaal" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">GitHub</a>
-      <a href="https://linkedin.com/in/luke-atkins" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">LinkedIn</a>
-      <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">Email</a>
+    <div class="mt-5 flex-col flex-wrap justify-center mb-8 bg-white bg-opacity-50 shadow-md rounded-lg backdrop-filter backdrop-blur-sm mx-auto max-w-lg">
+      <div class="pt-3 text-center">
+        <p class="text-gray-600 me-description">Ask me about my research @ LSU! Outside of that, you can find me hosting pitch-ins, discovering new house music, and playing pickleball.</p>
+      </div>
+      <div class="pb-2 text-center">
+        <a href="../media/LukeAtkinsResume.pdf" class="text-blue-500 font-bold hover:text-blue-700 mx-4" target="_blank">Resume</a>
+        <a href="https://github.com/lukeaal" class="text-blue-500 font-bold hover:text-blue-700 mx-4" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/luke-atkins" class="text-blue-500 font-bold before:hover:text-blue-700 mx-4" target="_blank">LinkedIn</a>
+        <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 font-bold hover:text-blue-700 mx-4" target="_blank">Email</a>
+      </div>
     </div>
+    
     <section class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold mb-4 project-heading">Projects</h2>
       <div class="grid grid-cols-1 gap-4">
@@ -103,9 +125,9 @@
             CashMap reminds you.
           </p>
           <div class="mt-4"></div>
-          <p class="text-gray-600 justify-start">Baked with ❤️ using UI Kit, Swift UI, Widget Kit, Map Kit, Core Location, and Core Data.</p>
+          <p class="text-gray-600 justify-start font-semibold">Baked with ❤️ using UI Kit, Swift UI, Widget Kit, Map Kit, Core Location, and Core Data.</p>
           <div class="flex justify-end">
-            <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
+            <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 font-bold hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
           </div>
         </div>
          <!--Spotify Artist Niche Analysis - Spotipy API and Regression--> 
@@ -120,16 +142,16 @@
             explore preferred abstract musical features within their own playlists and beyond.
           </p>
           <div class="mt-4"></div>
-          <p class="text-gray-600 justify-start">Basted with ❤️ using Python, R, SpotiPy, NumPy, and Rpart.</p>
+          <p class="text-gray-600 justify-start font-semibold">Basted with ❤️ using Python, R, SpotiPy, NumPy, and Rpart.</p>
           <div class="flex justify-end">
-            <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
+            <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 font-bold hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
           </div>
         </div>
 
         <!--Numpy Only Nerual Network - UCI Wine Dataset-->
         <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
           <h3 class="text-xl font-bold mb-2">NumPy Only Nerual Network 🧠🍷 - UCI Wine Dataset</h3>
-          <p class="text-gray-600">
+          <p class="text-grey-600">
             Wine region classification achieved by building a neural network from scratch using 
             a Multi-Layer Perceptron algorithm. The implementation is based on 
             'Machine Learning: An Algorithmic Perspective' by Stephen Marsland, Chapman & Hall. 
@@ -139,9 +161,9 @@
              with just one hidden layer.
           </p>
           <div class="mt-4"></div>
-          <p class="text-gray-600 justify-start">Battered with ❤️ using NumPy</p>
+          <p class="text-gray-600 justify-start font-semibold">Battered with ❤️ using NumPy</p>
           <div class="flex justify-end">
-            <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
+            <a href="mailto:&#x6c;&#x75;&#x6b;&#x65;&#x61;&#x74;&#x6b;&#x69;&#x40;&#x69;&#x75;&#x2e;&#x65;&#x64;&#x75;" class="text-blue-500 font-bold hover:text-blue-700 mx-4" target = "_blank">readme &#8599;</a>
           </div>
         </div>
 
