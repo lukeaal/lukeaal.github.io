@@ -69,3 +69,6 @@ inside of the index.html file, near the head of the document, the embedding is a
 # Usage (if you want, copy my work)
 ## 1. Replace photos, text, and links
 Be sure to go over every link and text in the index.html page so that all of your github links are corretly placed. While I would not mind the extra SEO, I wish you the best in your thourough look though the code. Take the photos and replace them with whatever you would like. The CouchEmoji icon should be about 24pt by 24pt, and the profile photo should be about 600px by 800px.
+
+# Future...
+I plan on adding a blog to speak my mind haha
