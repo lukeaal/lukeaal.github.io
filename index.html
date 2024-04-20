@@ -110,6 +110,15 @@
       height: 100%;
       max-width: 100%; /* added */
     }
+    .glass-panel {
+    color: #fff;
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    border-radius: 15px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+  }
    </style>
 
   <title>Luke Atkins</title>
@@ -136,8 +145,7 @@
         
       </div>
     </header>
-
-    <div class="mt-5 flex-col flex-wrap justify-center mb-8 bg-white bg-opacity-50 shadow-md rounded-lg backdrop-filter backdrop-blur-sm mx-auto max-w-lg">
+    <div class="glass-panel mx-auto max-w-lg">
       <div class="pt-3 text-center">
         <p class="text-gray-600 me-description">Ask me about Out of The Box Scholars! Outside of that, you can find me hosting pitch-ins, discovering new house music, and playing pickleball.</p>
       </div>
@@ -150,7 +158,7 @@
     </div>
     
     <!-- button section-->
-    <div class="button-row">
+    <div class="pt-5 button-row">
       <button class="section-btn active" data-target="projects-section">Software Development</button>
       <button class="section-btn" data-target="art-section">Interactive Digital Art</button>
     </div>
@@ -161,7 +169,7 @@
       <h2 class="text-3xl font-bold mb-4 project-heading text-blue-900">Development Experiences</h2>
       <div class="grid grid-cols-1 gap-4">
         <!-- HackHarvard W -->
-        <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+        <div class="glass-panel">
           <h3 class="text-xl font-bold mb-2 text-blue-900">HackHavard W 🏆🥾 -  <span class="text-blue-500">Health and Fitness Track, biometric trail grading</span></h3>
           <p class="text-gray-600">
             Competed at HackHarvard 2023 in a team of four awesome engineers and designers! We built 
@@ -180,7 +188,7 @@
           </div>
         </div>
         <!-- Cashmap ios app -->
-        <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+        <div class="glass-panel">
           <h3 class="text-xl font-bold mb-2 text-blue-900">CashMap 💵📍 -  <span class="text-blue-500">IOS app for location based spending awareness</span></h3>
           <p class="text-gray-600">
             CashMap is an IOS app that promotes daily budget mindfulness in a geographical context. 
@@ -197,7 +205,7 @@
           </div>
         </div>
          <!--Spotify Artist Niche Analysis - Spotipy API and Regression--> 
-         <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+         <div class="glass-panel">
           <h3 class="text-xl font-bold mb-2 text-blue-900">Spotify Artist Niche Analysis 🎶📊 -  <span class="text-blue-500">SpotiPy API and regression</span></h3>
           <p class="text-gray-600">
             Analyze musicians' specialized features using Spotify API data. By regression on popular 
@@ -215,7 +223,7 @@
         </div>
 
         <!--Numpy Only Nerual Network - UCI Wine Dataset-->
-        <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+        <div class="glass-panel">
           <h3 class="text-xl font-bold mb-2 text-blue-900">NumPy Only Neural Network 🧠🍷 - <span class="text-blue-500">Wine Dataset</span> </h3>
           <p class="text-gray-600">
             Wine region classification achieved by building a neural network from scratch using 
@@ -234,7 +242,7 @@
         </div>
 
          <!--Knowledge Map -->
-         <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+         <div class="glass-panel">
           <h3 class="text-xl font-bold mb-2 text-blue-900">Knowledge Map 🤔🗺️ - <span class="text-blue-500">SpartaHack 8 hackathon submission</span> </h3>
           <p class="text-gray-600">
             Knowledge connects ideas for you by geographically displaying interactable nodes related to a query.
@@ -262,14 +270,14 @@
         <!-- art work inside here-->
         <div class="grid grid-cols-1 gap-4">
           <!-- #1 Pinhole -->
-          <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+          <div class="glass-panel">
             <h3 class="text-xl font-bold mb-2 text-blue-900">Pinhole 🌘🌊- <span class="text-blue-500">Live Exhibited Work, light and motion interactive </span></h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="felx flex-col">
                 <div class="video-container">
                   <iframe class="w-full h-full" src="https://www.youtube.com/embed/I04p7ov1h5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <p class="text-gray-600 justify-start font-semibold"> (live exhibit)</p>
+                <p class="text-gray-600 justify-start font-semibold"> (IUB Science Fest 2024 - live exhibit)</p>
               </div>
               <div class="felx flex-col">
                 <div class="video-container">
