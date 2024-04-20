@@ -95,6 +95,21 @@
       background-color: #4299e1;
       color: #fff;
     }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 100%; /* added */
+    }
    </style>
 
   <title>Luke Atkins</title>
@@ -248,11 +263,11 @@
         <div class="grid grid-cols-1 gap-4">
           <!-- #1 Pinhole -->
           <div class="bg-white bg-opacity-50 shadow-md rounded-lg p-4 backdrop-filter backdrop-blur-sm">
-            <h3 class="text-xl font-bold mb-2 text-blue-900">Pinhole 🌘🌊- light and motion interactive <span class="text-blue-500">Health and Fitness Track, biometric trail grading</span></h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/I04p7ov1h5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="text-gray-600">
-              Showcased at IUB Science Fest 2024 for the Eclipse.
-            </p>
+            <h3 class="text-xl font-bold mb-2 text-blue-900">Pinhole 🌘🌊- <span class="text-blue-500">Live Exhibited Work, light and motion interactive </span></h3>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/I04p7ov1h5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="text-gray-600">Showcased at IUB Science Fest 2024 for the Eclipse.</p>
             <div class="mt-4"></div>
           </div>
           <!-- #2 Remix and Rememory -->
