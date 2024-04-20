@@ -76,15 +76,30 @@
     .after-dash{
       color: #d946ef;
     }
+    .button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    }
+    .section-btn {
+      background-color: #e2e8f0;
+      color: #2d3748;
+      padding: 0.5rem 1rem;
+      margin: 0 0.25rem;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .section-btn.active {
+      background-color: #4299e1;
+      color: #fff;
+    }
    </style>
-   
-
 
   <title>Luke Atkins</title>
 
    
-
-  
 </head>
 <body class="gradient-bg">
   <div class="spline-view-bg">
@@ -105,8 +120,8 @@
         </div>
         
       </div>
-
     </header>
+
     <div class="mt-5 flex-col flex-wrap justify-center mb-8 bg-white bg-opacity-50 shadow-md rounded-lg backdrop-filter backdrop-blur-sm mx-auto max-w-lg">
       <div class="pt-3 text-center">
         <p class="text-gray-600 me-description">Ask me about Out of The Box Scholars! Outside of that, you can find me hosting pitch-ins, discovering new house music, and playing pickleball.</p>
@@ -119,6 +134,14 @@
       </div>
     </div>
     
+    <!-- button section-->
+    <div class="button-row">
+      <button class="section-btn active" data-target="projects-section">Projects</button>
+      <button class="section-btn" data-target="art-section">Art</button>
+    </div>
+
+    <!-- Project section (initially showing)-->
+    <div id="projects-section">
     <section class="max-w-4xl mx-auto mb-6">
       <h2 class="text-3xl font-bold mb-4 project-heading text-blue-900">Projects</h2>
       <div class="grid grid-cols-1 gap-4">
@@ -215,6 +238,12 @@
 
       </div>
     </section>
+    </div>
+
+    <!-- Art Section (initially hidden) -->
+    <div id="art-section" style="display: none;">
+    <!-- Your art section content goes here -->
+    </div>
 
     <footer class="text-gray-100 py-4">
       <div class="container mx-auto text-center">
@@ -223,6 +252,32 @@
     </footer>
   </div>
 
+
+  <!-- script for changing sections-->
+  <script>
+    const sectionBtns = document.querySelectorAll('.section-btn');
+    const sections = document.querySelectorAll('#projects-section, #art-section');
+  
+    sectionBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetSection = document.getElementById(btn.dataset.target);
+  
+        // Hide all sections
+        sections.forEach(section => {
+          section.style.display = 'none';
+        });
+  
+        // Remove active class from all buttons
+        sectionBtns.forEach(btn => {
+          btn.classList.remove('active');
+        });
+  
+        // Show the target section and add active class to the clicked button
+        targetSection.style.display = 'block';
+        btn.classList.add('active');
+      });
+    });
+  </script>
   
 </body>
 </html>
